@@ -1,9 +1,10 @@
 ## Needed /Tech stacks
     + go
     + mysql
-    + depedency management
+    + dep
     
 ## To get started follow this checklist:
+    + dep ensure
     + create schema golang
     + go get -u github.com/BurntSushi/toml gopkg.in/mgo.v2 github.com/gorilla/mux
     + go get -u "github.com/jinzhu/gorm"
