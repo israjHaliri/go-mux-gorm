@@ -5,6 +5,7 @@ import (
 	"go-mux-gorm/config"
 	"go-mux-gorm/controller"
 	"go-mux-gorm/model"
+	"go-mux-gorm/util"
 	"log"
 	"net/http"
 )
@@ -15,14 +16,16 @@ func main() {
 	db := config.Open()
 	db.AutoMigrate(model.Movie{})
 
-	r := mux.NewRouter()
-	r.HandleFunc("/movies", controller.FindAll).Methods("GET")
-	r.HandleFunc("/movies/{id}",controller. FindById).Methods("GET")
-	r.HandleFunc("/movies", controller.Save).Methods("POST")
-	r.HandleFunc("/movies", controller.Update).Methods("PUT")
-	r.HandleFunc("/movies/{id}", controller.Delete).Methods("DELETE")
+	router := mux.NewRouter()
+	router.Use(util.JwtAuthentication)
+	router.HandleFunc("/movies", controller.FindAll).Methods("GET")
+	router.HandleFunc("/movies/{id}", controller.FindById).Methods("GET")
+	router.HandleFunc("/movies", controller.Save).Methods("POST")
+	router.HandleFunc("/movies", controller.Update).Methods("PUT")
+	router.HandleFunc("/movies/{id}", controller.Delete).Methods("DELETE")
+	router.HandleFunc("/login", controller.Login).Methods("POST")
 
-	if err := http.ListenAndServe(":7000", r); err != nil {
+	if err := http.ListenAndServe(":7000", router); err != nil {
 		panic(err.Error())
 	}
 }

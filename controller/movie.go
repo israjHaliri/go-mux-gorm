@@ -5,6 +5,7 @@ import (
 	"github.com/gorilla/mux"
 	"go-mux-gorm/model"
 	"go-mux-gorm/service"
+	"go-mux-gorm/util"
 	"net/http"
 	"strconv"
 )
@@ -13,11 +14,11 @@ func FindAll(w http.ResponseWriter, r *http.Request) {
 	movies := service.FindAll()
 
 	if movies == nil {
-		responseWithError(w, http.StatusInternalServerError, "Not Found")
+		util.ResponseWithError(w, http.StatusInternalServerError, "Not Found")
 		return
 	}
 
-	responseWithJson(w, http.StatusOK, movies)
+	util.ResponseWithJson(w, http.StatusOK, movies)
 }
 
 func FindById(w http.ResponseWriter, r *http.Request) {
@@ -32,12 +33,12 @@ func FindById(w http.ResponseWriter, r *http.Request) {
 	movie := service.FindById(id)
 
 	if movie == nil {
-		responseWithError(w, http.StatusBadRequest, "Invalid Movie ID")
+		util.ResponseWithError(w, http.StatusBadRequest, "Invalid Movie ID")
 
 		return
 	}
 
-	responseWithJson(w, http.StatusOK, movie)
+	util.ResponseWithJson(w, http.StatusOK, movie)
 }
 
 func Save(w http.ResponseWriter, r *http.Request) {
@@ -46,18 +47,18 @@ func Save(w http.ResponseWriter, r *http.Request) {
 	var movie model.Movie
 
 	if err := json.NewDecoder(r.Body).Decode(&movie); err != nil {
-		responseWithError(w, http.StatusBadRequest, "Invalid request payload")
+		util.ResponseWithError(w, http.StatusBadRequest, "Invalid request payload")
 
 		return
 	}
 
 	if _, err := service.Save(movie); err != nil {
-		responseWithError(w, http.StatusInternalServerError, err.Error())
+		util.ResponseWithError(w, http.StatusInternalServerError, err.Error())
 
 		return
 	}
 
-	responseWithJson(w, http.StatusCreated, movie)
+	util.ResponseWithJson(w, http.StatusCreated, movie)
 }
 
 func Update(w http.ResponseWriter, r *http.Request) {
@@ -66,18 +67,18 @@ func Update(w http.ResponseWriter, r *http.Request) {
 	var movie model.Movie
 
 	if err := json.NewDecoder(r.Body).Decode(&movie); err != nil {
-		responseWithError(w, http.StatusBadRequest, "Invalid request payload")
+		util.ResponseWithError(w, http.StatusBadRequest, "Invalid request payload")
 
 		return
 	}
 
 	if _, err := service.Update(movie); err != nil {
-		responseWithError(w, http.StatusInternalServerError, err.Error())
+		util.ResponseWithError(w, http.StatusInternalServerError, err.Error())
 
 		return
 	}
 
-	responseWithJson(w, http.StatusCreated, movie)
+	util.ResponseWithJson(w, http.StatusCreated, movie)
 }
 
 func Delete(w http.ResponseWriter, r *http.Request) {
@@ -92,21 +93,28 @@ func Delete(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if err := service.Delete(id); err != nil {
-		responseWithError(w, http.StatusInternalServerError, err.Error())
+		util.ResponseWithError(w, http.StatusInternalServerError, err.Error())
 
 		return
 	}
 
-	responseWithJson(w, http.StatusCreated, "Deleted")
+	util.ResponseWithJson(w, http.StatusCreated, "Deleted")
 }
 
-func responseWithJson(w http.ResponseWriter, code int, payload interface{}) {
-	response, _ := json.Marshal(payload)
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(code)
-	w.Write(response)
-}
+func Login(w http.ResponseWriter, r *http.Request) {
+	var account model.Account
 
-func responseWithError(w http.ResponseWriter, code int, msg string) {
-	responseWithJson(w, code, map[string]string{"error": msg})
+	if err := json.NewDecoder(r.Body).Decode(&account); err != nil {
+		util.ResponseWithError(w, http.StatusBadRequest, "Invalid request payload")
+
+		return
+	}
+
+	account, status := service.Login(account)
+
+	if status {
+		util.ResponseWithJson(w, http.StatusOK, account)
+	} else {
+		util.ResponseWithJson(w, http.StatusNotFound, "Username or passowrd is wrong")
+	}
 }
