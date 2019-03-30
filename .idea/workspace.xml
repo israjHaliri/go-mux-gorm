@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74a9f841-6013-4ff7-8b18-ac8184b110ff" name="Default Changelist" comment="update template">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/account.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/token.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/response.go" afterDir="false" />
+    <list default="true" id="74a9f841-6013-4ff7-8b18-ac8184b110ff" name="Default Changelist" comment="update jwt">
+      <change afterPath="$PROJECT_DIR$/service/auth_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/movie_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/response_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gopkg.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Gopkg.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/movie.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/movie.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,39 +71,40 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="env" value="1" />
-          <entry key="go" value="53" />
+          <entry key="go" value="61" />
           <entry key="lock" value="1" />
-          <entry key="md" value="2" />
+          <entry key="md" value="3" />
           <entry key="toml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="53" />
-          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="Go" value="61" />
+          <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="1809" />
-          <entry key="md" value="119" />
+          <entry key="go" value="2077" />
+          <entry key="md" value="158" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="1809" />
-          <entry key="PLAIN_TEXT" value="119" />
+          <entry key="Go" value="2077" />
+          <entry key="PLAIN_TEXT" value="161" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="210">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -116,77 +112,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/auth.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="69" column="36" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/movie.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="103" column="10" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="10" />
-              <folding>
-                <element signature="e#20#160#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/service/auth.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-              <folding>
-                <element signature="e#17#115#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/movie.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="30" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/token.go">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+              <caret line="14" column="54" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/account.go">
+        <entry file="file://$PROJECT_DIR$/util/response.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="39" />
+              <folding>
+                <element signature="e#14#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/response_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/auth_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              <folding>
+                <element signature="e#17#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/service/movie_test.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gopkg.toml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="e#22#87#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -210,6 +182,8 @@
       <find>respond</find>
       <find>responseWithJson</find>
       <find>token_password</find>
+      <find>get</find>
+      <find>go get</find>
     </findStrings>
     <replaceStrings>
       <replace>connection</replace>
@@ -217,6 +191,8 @@
       <replace>db := config.Connection()</replace>
       <replace>ResponseWithJson</replace>
       <replace>response</replace>
+      <replace>ensure</replace>
+      <replace>dep ensure</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/template/static</dir>
@@ -248,7 +224,6 @@
         <option value="$PROJECT_DIR$/service/employee.go" />
         <option value="$PROJECT_DIR$/controller/movies.go" />
         <option value="$PROJECT_DIR$/config/datasource.go" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/util/response.go" />
         <option value="$PROJECT_DIR$/service/public.go" />
@@ -260,6 +235,14 @@
         <option value="$PROJECT_DIR$/controller/movie.go" />
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/service/auth.go" />
+        <option value="$PROJECT_DIR$/test/service/auth.go" />
+        <option value="$PROJECT_DIR$/auth_test.go" />
+        <option value="$PROJECT_DIR$/test/service/auth_test.go" />
+        <option value="$PROJECT_DIR$/service_test/auth_test.go" />
+        <option value="$PROJECT_DIR$/service/auth_test.go" />
+        <option value="$PROJECT_DIR$/service/movie_test.go" />
+        <option value="$PROJECT_DIR$/util/response_test.go" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -291,11 +274,6 @@
               <item name="go-mux-gorm" type="b2602c69:ProjectViewProjectNode" />
               <item name="go-mux-gorm" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-mux-gorm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-mux-gorm" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="go-mux-gorm" type="b2602c69:ProjectViewProjectNode" />
@@ -340,16 +318,19 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/service" />
+      <recent name="$PROJECT_DIR$/service_test" />
+      <recent name="$PROJECT_DIR$/test/service" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/template/layout" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/util" />
       <recent name="$PROJECT_DIR$/service" />
       <recent name="$PROJECT_DIR$/model" />
       <recent name="$PROJECT_DIR$/template/static" />
       <recent name="$PROJECT_DIR$/controller" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/template/layout" />
-      <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -364,6 +345,66 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Go Test.TestFindAll in go-mux-gorm/util">
+    <configuration name="TestFindAll in go-mux-gorm/util" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-mux-gorm" />
+      <working_directory value="$PROJECT_DIR$/util" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go-mux-gorm/util" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestFindAll$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestLogin in go-mux-gorm/test/service" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-mux-gorm" />
+      <working_directory value="$PROJECT_DIR$/test/service" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go-mux-gorm/test/service" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestLogin$" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Test.TestLogin in go-mux-gorm/test/service" />
+      <item itemvalue="Go Test.TestFindAll in go-mux-gorm/util" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestFindAll in go-mux-gorm/util" />
+        <item itemvalue="Go Test.TestLogin in go-mux-gorm/test/service" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestLogin_in_go-mux-gorm_test_service - 2019.03.30 at 16h 17m 23s.xml">
+      <configuration name="TestLogin in go-mux-gorm/test/service" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestLogin_in_go-mux-gorm_test_service - 2019.03.30 at 16h 17m 38s.xml">
+      <configuration name="TestLogin in go-mux-gorm/test/service" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestLogin_in_go-mux-gorm_test_service - 2019.03.30 at 16h 20m 46s.xml">
+      <configuration name="TestLogin in go-mux-gorm/test/service" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestLogin_in_go-mux-gorm_test_service - 2019.03.30 at 16h 20m 51s.xml">
+      <configuration name="TestLogin in go-mux-gorm/test/service" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestLogin_in_go-mux-gorm_test_service - 2019.03.30 at 16h 21m 06s.xml">
+      <configuration name="TestLogin in go-mux-gorm/test/service" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestLogin_in_go-mux-gorm_test_service - 2019.03.30 at 16h 21m 19s.xml">
+      <configuration name="TestLogin in go-mux-gorm/test/service" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestFindAll_in_go-mux-gorm_util - 2019.03.30 at 16h 45m 24s.xml">
+      <configuration name="TestFindAll in go-mux-gorm/util" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestFindAll_in_go-mux-gorm_util - 2019.03.30 at 16h 45m 54s.xml">
+      <configuration name="TestFindAll in go-mux-gorm/util" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="811" extended-state="0" />
     <editor active="true" />
@@ -373,14 +414,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32823366" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32962447" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49928468" weight="0.31154382" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49928468" visible="true" weight="0.31154382" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.31154382" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -420,7 +461,8 @@
     <MESSAGE value="update service" />
     <MESSAGE value="update controller" />
     <MESSAGE value="update template" />
-    <option name="LAST_COMMIT_MESSAGE" value="update template" />
+    <MESSAGE value="update jwt" />
+    <option name="LAST_COMMIT_MESSAGE" value="update jwt" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../tutorial/helloworld.go">
@@ -457,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/go/1.12.1/libexec/src/net/http/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="2438" column="5" selection-start-line="2438" selection-start-column="5" selection-end-line="2438" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/api.go" />
     <entry file="file://$PROJECT_DIR$/controller/page.go" />
     <entry file="file://$PROJECT_DIR$/service/employee.go" />
@@ -485,39 +520,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/response.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/public.go" />
-    <entry file="file://$PROJECT_DIR$/service/movie.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gopkg.toml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
+        <state relative-caret-position="541">
           <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/movie.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -542,23 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/auth.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="69" column="36" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/movie.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="103" column="10" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="10" />
-          <folding>
-            <element signature="e#20#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/token.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -575,11 +565,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/service/auth.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="330">
+          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
           <folding>
             <element signature="e#17#115#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/movie.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/movie.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/auth_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="e#17#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/movie_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#22#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.12.1/libexec/src/net/http/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/movie.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="103" column="10" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="10" />
+          <folding>
+            <element signature="e#20#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/auth.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/response.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <element signature="e#14#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/response_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
         </state>
       </provider>
     </entry>
