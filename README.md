@@ -10,7 +10,7 @@
     + dep ensure -add "github.com/jinzhu/gorm"
     + dep ensure -add "github.com/jinzhu/gorm/dialects/mysql"
     + dep ensure -add "github.com/go-sql-driver/mysql"
-    + go test -v ./service ./util
+    + go test -v ./service ./util  -cover
     + go build
     + go run go-mux-gorm (for production use supervisor)
 
